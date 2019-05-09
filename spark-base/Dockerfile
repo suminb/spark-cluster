@@ -17,7 +17,7 @@ RUN apk add --no-cache --virtual=.build-dependencies wget ca-certificates && \
     ln -s "${SCALA_HOME}/bin/"* "/usr/bin/" && \
     apk del .build-dependencies && \
     rm -rf "/tmp/"*
-    
+
 #Scala instalation
 RUN export PATH="/usr/local/sbt/bin:$PATH" && \
     apk update && apk add ca-certificates wget tar && mkdir -p "/usr/local/sbt" && \
